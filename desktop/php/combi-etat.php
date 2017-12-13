@@ -2,7 +2,7 @@
 if (!isConnect('admin')) {
 	throw new Exception('{{401 - Accès non autorisé}}');
 }
-$plugin = plugin::byId('template');
+$plugin = plugin::byId('combi-etat');
 sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 ?>
@@ -132,5 +132,5 @@ foreach (object::all() as $object) {
 </div>
 </div>
 
-<?php include_file('desktop', 'template', 'js', 'template');?>
-<?php include_file('core', 'plugin.template', 'js');?>
+<?php include_file('desktop', 'combi-etat', 'js', 'combi-etat');?>
+<?php include_file('core', 'plugin.combi-etat', 'js');?>
